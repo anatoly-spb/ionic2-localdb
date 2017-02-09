@@ -11,17 +11,20 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
-  <ion-list>
-    <ion-row *ngFor='let item of items' wrap>
+    <ion-row wrap class="header">
       <ion-col>
-        {{item.datetime|date}}
+        Время
       </ion-col>
       <ion-col>
-        {{item.level}}
+        Сообщение
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor='let item of items' wrap [class]="styles[item.level]">
+      <ion-col>
+        {{item.datetime| date: 'dd/MM/yyyy H:mm'}}
       </ion-col>
       <ion-col>
         {{item.msg}}
       </ion-col>
     </ion-row>
-  </ion-list>
 </ion-content>

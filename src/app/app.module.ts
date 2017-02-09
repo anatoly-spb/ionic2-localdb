@@ -5,12 +5,14 @@ import { HomePage } from '../pages/home/home';
 import { Storage } from '@ionic/storage';
 import { DBProvider } from '../providers/db-provider';
 import { LogProvider } from '../providers/log-provider';
+import { GridComponent } from '../components/grid/grid';
 
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    GridComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)
